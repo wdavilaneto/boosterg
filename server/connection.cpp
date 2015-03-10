@@ -28,11 +28,10 @@ namespace http {
         }
 
         void connection::start() {
-            socket_.async_read_some(boost::asio::buffer(buffer_),
-                    strand_.wrap(
-                            boost::bind(&connection::handle_read, shared_from_this(),
-                                    boost::asio::placeholders::error,
-                                    boost::asio::placeholders::bytes_transferred)));
+            socket_.async_read_some( boost::asio::buffer(buffer_),
+                    strand_.wrap( boost::bind(&connection::handle_read, shared_from_this(),
+                                    boost::asio::placeholders::error,boost::asio::placeholders::bytes_transferred))
+                );
         }
 
         void connection::handle_read(const boost::system::error_code &e,
