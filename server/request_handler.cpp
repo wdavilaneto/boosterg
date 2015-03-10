@@ -11,14 +11,14 @@
 #include "request_handler.hpp"
 #include <fstream>
 #include <sstream>
-#include <string>
+#include <iostream>
 #include <boost/lexical_cast.hpp>
-#include "mime_types.hpp"
+#include "server/mime_types/mime_types.hpp"
 #include "reply.hpp"
 #include "request.hpp"
 
 namespace http {
-    namespace server3 {
+    namespace server {
 
         request_handler::request_handler(const std::string& doc_root) : doc_root_(doc_root) {
 

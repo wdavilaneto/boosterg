@@ -1,0 +1,1 @@
+add_library(mime_types mime_types.cpp)

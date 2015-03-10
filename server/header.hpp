@@ -14,13 +14,21 @@
 #include <string>
 
 namespace http {
-    namespace server3 {
+    namespace server {
 
-        struct header {
+        class header {
+        public:
+            header() {
+            };
+
+            header(std::string aname, std::string avalue) : name(aname), value(avalue) {
+            };
+
+            virtual ~header() {
+            };
             std::string name;
             std::string value;
         };
-
     } // namespace server3
 } // namespace http
 

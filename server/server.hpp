@@ -21,7 +21,7 @@
 
 namespace http {
 
-    namespace server3 {
+    namespace server {
 
         /// The top-level class of the HTTP server.
 

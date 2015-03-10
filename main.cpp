@@ -9,18 +9,24 @@
 //
 
 #include <iostream>
-#include <string>
+#include <server/header.hpp>
+
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
 #include <boost/lexical_cast.hpp>
-#include "server.hpp"
-
-#include "conf/syntax_shugar.hpp"
+#include "server/server.hpp"
+#include "server/conf/syntax_shugar.hpp"
 #include <boost/property_tree/json_parser.hpp>
 
-
 int main(int argc, char* argv[]) {
-    
+
+    http::server::header header;
+
+    header.name = "walter";
+    header.value = "test";
+
+    std::cout << "this is a " << header.name << " " <<header.value ;
+
     try {
         if (argc != 5) {
             std::cerr << "Usage: http_server <address> <port> <threads> <doc_root>\n";
@@ -33,7 +39,7 @@ int main(int argc, char* argv[]) {
 
         // Initialise the server.
         std::size_t num_threads = boost::lexical_cast<std::size_t>(argv[3]);
-        http::server3::server s(argv[1], argv[2], argv[4], num_threads);
+        http::server::server s(argv[1], argv[2], argv[4], num_threads);
 
         // Run the server until stopped.
         s.run();
@@ -41,4 +47,5 @@ int main(int argc, char* argv[]) {
         std::cerr << "exception: " << e.what() << "\n";
     }
     return 0;
+
 }

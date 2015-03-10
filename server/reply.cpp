@@ -13,7 +13,7 @@
 #include <boost/lexical_cast.hpp>
 
 namespace http {
-namespace server3 {
+namespace server {
 
 namespace status_strings {
 

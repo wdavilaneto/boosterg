@@ -15,7 +15,7 @@
 #include <boost/noncopyable.hpp>
 
 namespace http {
-    namespace server3 {
+    namespace server {
 
         struct reply;
         struct request;
