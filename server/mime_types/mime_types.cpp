@@ -36,10 +36,8 @@ namespace http {
                         return m->mime_type;
                     }
                 }
-
                 return "text/plain";
             }
-
         } // namespace mime_types
     } // namespace server
 } // namespace http

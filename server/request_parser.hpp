@@ -35,8 +35,7 @@ namespace http {
             /// input has been consumed.
 
             template <typename InputIterator>
-            boost::tuple<boost::tribool, InputIterator> parse(request& req,
-                    InputIterator begin, InputIterator end) {
+            boost::tuple<boost::tribool, InputIterator> parse(request& req, InputIterator begin, InputIterator end) {
                 while (begin != end) {
                     boost::tribool result = consume(req, *begin++);
                     if (result || !result)
