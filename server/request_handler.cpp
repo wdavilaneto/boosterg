@@ -27,6 +27,8 @@ namespace http {
         void request_handler::handle_request(const request& req, reply& rep) {
             // Decode url to path.
             std::string request_path;
+
+            // TODO change to an efcient patter to find JSON adequate service
             if (!url_decode(req.uri, request_path)) {
                 rep = reply::stock_reply(reply::bad_request);
                 return;
