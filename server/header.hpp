@@ -18,14 +18,10 @@ namespace http {
 
         class header {
         public:
-            header() {
-            };
+            header() {};
+            header(std::string aname, std::string avalue) : name(aname), value(avalue) {};
 
-            header(std::string aname, std::string avalue) : name(aname), value(avalue) {
-            };
-
-            virtual ~header() {
-            };
+            virtual ~header() {};
             std::string name;
             std::string value;
         };

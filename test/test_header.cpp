@@ -19,5 +19,4 @@ BOOST_AUTO_TEST_CASE(test_header) {
     BOOST_CHECK_EQUAL(header2.name, "Accept-Encoding");
     BOOST_CHECK_EQUAL(header2.value, "gzip, deflate, sdch");
 
-
 }

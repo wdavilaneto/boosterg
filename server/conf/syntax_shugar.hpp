@@ -12,9 +12,7 @@
 extern "C" {
 #endif
 
-
 #define foreach BOOST_FOREACH
-
 
 #ifdef	__cplusplus
 }
