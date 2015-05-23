@@ -1,0 +1,9 @@
+dist
+.gradle
+*.iml
+.iml
+mgpe.iml
+.idea
+.svn
+log
+build
